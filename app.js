@@ -10,9 +10,13 @@ const taskInput = document.querySelector('#task');
 
 loadEventListeners();
 
+
+// This eventlistener is specifically to hold all functions that take place within the component
 function loadEventListeners(){
     // Adding a task event
     form.addEventListener('submit', addTask);
+    // Removing the task event
+    taskList.addEventListener('click', removeTask);
 }
 
 // Add task function 
@@ -50,8 +54,16 @@ function addTask(e){
     taskInput.value = '';
 
     console.log(li);
+    e.preventDefault();
+}
+
+function removeTask(e){
+
+if (e.target.parentElement.classList.contains('delete-item')){
+e.target.parentElement.parentElement.remove();
+
+}
 
 
     e.preventDefault();
 }
-
