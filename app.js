@@ -61,6 +61,15 @@ function addTask(e){
     e.preventDefault();
 }
 
+
+// STORE TASK IN LOCAL STORAGE FUNCTION 
+function storeTaskLocal(task){
+
+    
+}
+
+
+// Remove task function
 function removeTask(e){
 
 if (e.target.parentElement.classList.contains
