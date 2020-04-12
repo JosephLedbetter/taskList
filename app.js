@@ -2,7 +2,7 @@
 const form =  document.querySelector('#task-form');
 const taskList = document.querySelector('.collection');
 const clearBtn = document.querySelector('.clear-tasks');
-const filter = document.querySelector('.filter');
+const filter = document.querySelector('#filter');
 const taskInput = document.querySelector('#task');
 
 
@@ -83,15 +83,15 @@ function clearTasks(){
 
 // function to filter tasks
 function filterTasks(e) {
-const text = e.target.value.toLowerCase();
+    const text = e.target.value.toLowerCase();
 
 document.querySelectorAll('.collection-item').forEach
 (function(task) {
     const item = task.firstChild.textContent;
     if (item.toLowerCase().indexOf(text) != -1) {
-        task.style.display = "block";
-    } each {    
-        task.style.display = "none";
+        task.style.display = 'block';
+    } else {
+        task.style.display = 'none';
     }
   });
 }
