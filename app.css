@@ -1,0 +1,17 @@
+html, body{
+    background-image: linear-gradient(#9a0505, red);
+    padding-top: 50px;
+}
+
+.container{
+    height: 100vmax;
+    width: 100vmax;
+}
+
+.card{
+    margin-left: 10%;
+    height: 60vmax;
+    width: 70vmax;
+    padding: 10px;
+    border-radius: 10px;
+}
