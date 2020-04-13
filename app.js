@@ -4,7 +4,7 @@ const taskList = document.querySelector('.collection');
 const clearBtn = document.querySelector('.clear-tasks');
 const filter = document.querySelector('#filter');
 const taskInput = document.querySelector('#task');
-
+const errorMessage = document.querySelector('.error')
 
 // Function to load all event listeners
 
@@ -23,6 +23,8 @@ function loadEventListeners(){
     clearBtn.addEventListener('click', clearTasks);
     // Filter tasks
     filter.addEventListener('keyup', filterTasks)
+    // Show error message
+    errorMessage.addEventListener('keyup', validationError)
 }
 
 // Get Tasks
@@ -63,8 +65,8 @@ function getTasks(){
 
 // Add task function 
 function addTask(e){
-    if (taskInput.value === ''){
-        alert('Add task');
+    if (taskInput.value === '') {
+        alert('Task is blank. Please input task you wish to add below');
     }
 
     // Creating LI element
@@ -90,8 +92,7 @@ function addTask(e){
 
     // Appending the li to the list (ul) area
     taskList.appendChild(li);
-
-    
+ 
 storeTaskLocal(taskInput.value);
 
     // Clear the input
