@@ -24,7 +24,7 @@ html, body{
     font-weight: bolder;
     color: red;
     background: rgb(232, 232, 232);
-    width: 110%;
+    width: 68vmax;
     height: 3em;
     margin-left: -25px;
     margin-top: -25px;
@@ -35,6 +35,7 @@ html, body{
 .clock-holder{
     float: right;
 }
+
 input.btn{
     background: #4848ff;
 }
@@ -69,4 +70,11 @@ input.btn:focus{
 .clear-tasks.btn:focus{
     background: #4848ff;
     border: 2px white solid;
+}
+
+@media only screen and (max-width: 670px) {
+.clock-holder{
+    font-size: medium;
+}
+
 }
