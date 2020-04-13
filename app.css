@@ -32,6 +32,9 @@ html, body{
     border-radius: 10px 10px 0 0;
 }
 
+.clock-holder{
+    float: right;
+}
 input.btn{
     background: #4848ff;
 }

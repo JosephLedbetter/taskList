@@ -23,8 +23,6 @@ function loadEventListeners(){
     clearBtn.addEventListener('click', clearTasks);
     // Filter tasks
     filter.addEventListener('keyup', filterTasks)
-    // Show error message
-    errorMessage.addEventListener('keyup', validationError)
 }
 
 // Get Tasks
@@ -100,6 +98,14 @@ storeTaskLocal(taskInput.value);
 
     e.preventDefault();
 }
+
+const clock = $('.clock');
+        setInterval(() => {
+            const now = moment();
+            const humanReadable = now.format('dddd, MMMM Do YYYY, hh:mm:ssA');
+            $('#holder').text(humanReadable);
+        }, 1000);
+
 
 // localStorage.removeItem('tasks')
 
