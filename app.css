@@ -5,13 +5,21 @@ html, body{
 
 .container{
     height: 100vmax;
-    width: 100vmax;
+    width: 125vmax;
 }
 
 .card{
     margin-left: 10%;
-    height: 60vmax;
+    height: 100vmax;
     width: 70vmax;
     padding: 10px;
     border-radius: 10px;
+}
+
+input.btn{
+    background: #4848ff;
+}
+
+.clear-tasks{
+    background: #4848ff;
 }
