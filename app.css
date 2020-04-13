@@ -9,8 +9,7 @@ html, body{
 }
 
 .card{
-    margin-left: 10%;
-    height: 100vmax;
+    margin-left: 10%;    
     width: 70vmax;
     padding: 10px;
     border-radius: 10px;
@@ -20,6 +19,20 @@ input.btn{
     background: #4848ff;
 }
 
+input.btn:hover{
+    background-color: #6969fa;
+    border: 2px white solid;
+}
+
+input.btn:focus{
+    background: #4848ff;
+}
+
 .clear-tasks{
     background: #4848ff;
+}
+
+.clear-tasks.btn:hover{
+    background: #4848ff;
+    border: 2px white solid;
 }
