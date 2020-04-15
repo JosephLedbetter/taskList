@@ -190,6 +190,7 @@ function completedTask(e){
     console.log(compTask);
     document.querySelector('.completed-collection').appendChild(compTask)
     }
+
   }
   
 
@@ -232,4 +233,4 @@ document.querySelectorAll('.collection-item').forEach
 }
 
 
-localStorage.removeItem('tasks')
+// localStorage.removeItem('tasks')
