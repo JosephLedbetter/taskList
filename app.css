@@ -4,17 +4,18 @@
 
 html, body{
     background-image: linear-gradient(#9a0505, red);
-    padding-top: 50px;
     font-family: 'Roboto', sans-serif;
+    width: 600px;
+    margin: auto 0 auto 0;
 }
+
 
 .container{
     height: 100vmax;
-    width: 125vmax;
+    width: 100vmax;
 }
 
 .card{
-    margin-left: 10%;    
     width: 70vmax;
     padding: 10px;
     border-radius: 10px;
