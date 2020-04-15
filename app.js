@@ -23,6 +23,8 @@ function loadEventListeners(){
     clearBtn.addEventListener('click', clearTasks);
     // Filter tasks
     filter.addEventListener('keyup', filterTasks)
+    // Completed task 
+    taskList.addEventListener('click', completedTask)
 }
 
 // Get Tasks
@@ -65,6 +67,8 @@ function getTasks(){
 
     });
 };
+
+// ______________________________________________________________________
 
 // ADDING A TASK FUNCTION
 // ADDING A TASK FUNCTION
@@ -120,7 +124,6 @@ const clock = $('.clock');
         }, 1000);
 
 
-// localStorage.removeItem('tasks')
 
 // STORE TASK IN LOCAL STORAGE FUNCTION 
 function storeTaskLocal(task){
@@ -134,7 +137,7 @@ function storeTaskLocal(task){
 
     localStorage.setItem('tasks', JSON.stringify(tasks)); 
 }
-// _________________________________________________________________
+// ________________________________________________________________________
 
 // REMOVING A 'TASK' FUNCTION
 // REMOVING A 'TASK' FUNCTION
@@ -166,21 +169,35 @@ function removeTaskFromLocalStorage(taskItem){
 
     localStorage.setItem('tasks', JSON.stringify(tasks)); 
 }
-// ______________________________________________________________
+// _________________________________________________________________________
 
 // COMPLETED TASK 
 // COMPLETED TASK 
 // COMPLETED TASK 
+// COMPLETED TASK 
+// COMPLETED TASK 
+// COMPLETED TASK 
 
-function removeTask(e){
-    if (e.target.parentElement.classList.contains
-        ('completed-item')) {
-        if(confirm('Do you wish to mark this task completed?')) {
-            e.target.parentElement.parentElement.remove();
-        }
-        document.getElementsByClassName('.completed-collection').appendChild()
-      }
-   }
+function completedTask(e){
+   console.log('click heard');
+   if (e.target.parentElement.classList.contains
+    ('completed-item')) {
+        if(confirm('Do you wish to mark complete?')) {
+        e.target.parentElement.parentElement.remove();
+        console.log('task removed')
+    } 
+    const compTask =  e.target.parentElement.parentElement;
+    console.log(compTask);
+    document.querySelector('.completed-collection').appendChild(compTask)
+    }
+  }
+  
+
+
+
+
+// _________________________________________________________________________
+
 
 // function to clear all tasks at once
 function clearTasks(){
@@ -213,3 +230,6 @@ document.querySelectorAll('.collection-item').forEach
     }
   });
 }
+
+
+localStorage.removeItem('tasks')

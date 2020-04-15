@@ -75,18 +75,13 @@ input.btn:focus{
 }
 
 #completed{
-    visibility: hidden;
+    visibility: visible;
     background: #dcdbdb;
     width: auto;
 }
 
 .completed-title{
     color: red;
-}
-
-.fa-check-square:hover{
-    background-color: greenyellow;
-
 }
 
 
