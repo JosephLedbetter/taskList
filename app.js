@@ -46,18 +46,23 @@ function getTasks(){
 
     // Creating new link element for LI
     const link = document.createElement('a');
+    const link2 = document.createElement('a');
 
     // Add class name (secondary-content specific for the materialize library for adding items to the right of the content)
     link.className = 'delete-item secondary-content';
+    link2.className = 'completed-item secondary-content';
 
     // Adding icon html
-    link.innerHTML = '<i class="fa fa-remove">add</i>';
+    link.innerHTML = '<i class="fa fa-remove" style="color: red"></i>';
+    link2.innerHTML = '<i class="fa fa-check-square" aria-hidden="true" style="color: #4848ff"></i>';
 
     // Appending the link to the LI
     li.appendChild(link);
+    li.appendChild(link2);
 
     // Appending the li to the list (ul) area
     taskList.appendChild(li);
+
     });
 };
 
@@ -78,16 +83,20 @@ function addTask(e){
 
     // Creating new link element for LI
     const link = document.createElement('a');
+    const link2 = document.createElement('a');
+
 
     // Add class name (secondary-content specific for the materialize library for adding items to the right of the content)
     link.className = 'delete-item secondary-content';
+    link2.className = 'completed-item secondary-content';
 
     // Adding icon html
-    link.innerHTML = '<i class="fa fa-remove"></i>';
-    
+    link.innerHTML = '<i class="fa fa-remove" style="color: red"></i>';
+    link2.innerHTML = '<i class="fa fa-check-square" aria-hidden="true" style="color: #4848ff"></i>';
 
     // Appending the link to the LI
     li.appendChild(link);
+    li.appendChild(link2);
 
     // Appending the li to the list (ul) area
     taskList.appendChild(li);

@@ -43,7 +43,7 @@ input.btn{
 }
 
 input.btn:hover{
-    background-color: #6969fa;
+    background-color: #4848ff;
     border: 2px white solid;
 }
 
@@ -75,6 +75,7 @@ input.btn:focus{
 }
 
 #completed{
+    visibility: hidden;
     background: #dcdbdb;
     width: auto;
 }
