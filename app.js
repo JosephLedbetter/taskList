@@ -78,16 +78,12 @@ function addTask(e){
 
     // Creating new link element for LI
     const link = document.createElement('a');
-    const link2 = document.createElement('a');
 
     // Add class name (secondary-content specific for the materialize library for adding items to the right of the content)
     link.className = 'delete-item secondary-content';
-    link.classNAme = 'completed-item secondary-content';
 
     // Adding icon html
     link.innerHTML = '<i class="fa fa-remove"></i>';
-    link.innerHTML = '<i class="fa fa-add"></i>';
-
     
 
     // Appending the link to the LI
