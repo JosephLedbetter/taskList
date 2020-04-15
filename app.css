@@ -74,6 +74,19 @@ input.btn:focus{
     border: 2px white solid;
 }
 
+#completed{
+    background: #dcdbdb;
+    width: auto;
+}
+
+.completed-title{
+    color: red;
+}
+
+
+
+/* MEDIA QUERY FOR THE 700PX VIEWPORT */
+
 @media only screen and (max-width: 700px) {
 .clock-holder{
     font-size: medium;
