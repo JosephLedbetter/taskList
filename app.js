@@ -4,7 +4,7 @@ const taskList = document.querySelector('.collection');
 const clearBtn = document.querySelector('.clear-tasks');
 const filter = document.querySelector('#filter');
 const taskInput = document.querySelector('#task');
-const errorMessage = document.querySelector('.error')
+const completedItem = document.querySelector('.completed-item');
 
 // Function to load all event listeners
 
@@ -23,7 +23,9 @@ function loadEventListeners(){
     clearBtn.addEventListener('click', clearTasks);
     // Filter tasks
     filter.addEventListener('keyup', filterTasks)
-}
+    // Completed task 
+    completedItem.addEventListener('click', completeTask)
+}   
 
 // Get Tasks
 // *** THIS SECTION IS MAKING SURE THAT WHEN THE 
@@ -66,7 +68,10 @@ function getTasks(){
     });
 };
 
-// Add task function 
+// ADDING A TASK FUNCTION
+// ADDING A TASK FUNCTION
+// ADDING A TASK FUNCTION
+// ADDING A TASK FUNCTION
 function addTask(e){
     if (taskInput.value === '') {
         alert('Task is blank. Please input task you wish to add below');
@@ -135,12 +140,10 @@ function storeTaskLocal(task){
 
 // Remove task function
 function removeTask(e){
-
 if (e.target.parentElement.classList.contains
     ('delete-item')) {
     if(confirm('Are you sure you want to delete this task?')) {
         e.target.parentElement.parentElement.remove();
-    
     // Removing task from LocalStorage
 removeTaskFromLocalStorage(e.target.parentElement.parentElement)
   }
@@ -162,6 +165,20 @@ function removeTaskFromLocalStorage(taskItem){
 
     localStorage.setItem('tasks', JSON.stringify(tasks)); 
 }
+
+// COMPLETED TASK 
+// COMPLETED TASK 
+// COMPLETED TASK 
+function completeTask(e){
+    if (e.target.parentElement.classList.contains
+        ('completed-item')) {
+        if(confirm('Are you sure you want to mark this task completed?')) {
+            console.log(e.target.parentElement.classList.contains
+                ('completed-item'));
+         }
+    }
+}
+
 
 // function to clear all tasks at once
 function clearTasks(){
