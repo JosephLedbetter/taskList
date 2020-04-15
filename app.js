@@ -4,7 +4,7 @@ const taskList = document.querySelector('.collection');
 const clearBtn = document.querySelector('.clear-tasks');
 const filter = document.querySelector('#filter');
 const taskInput = document.querySelector('#task');
-const completedItem = document.querySelector('.completed-item');
+
 
 // Function to load all event listeners
 
@@ -23,9 +23,7 @@ function loadEventListeners(){
     clearBtn.addEventListener('click', clearTasks);
     // Filter tasks
     filter.addEventListener('keyup', filterTasks)
-    // Completed task 
-    completedItem.addEventListener('click', completeTask)
-}   
+}
 
 // Get Tasks
 // *** THIS SECTION IS MAKING SURE THAT WHEN THE 
@@ -136,9 +134,12 @@ function storeTaskLocal(task){
 
     localStorage.setItem('tasks', JSON.stringify(tasks)); 
 }
+// _________________________________________________________________
 
+// REMOVING A 'TASK' FUNCTION
+// REMOVING A 'TASK' FUNCTION
+// REMOVING A 'TASK' FUNCTION
 
-// Remove task function
 function removeTask(e){
 if (e.target.parentElement.classList.contains
     ('delete-item')) {
@@ -165,20 +166,21 @@ function removeTaskFromLocalStorage(taskItem){
 
     localStorage.setItem('tasks', JSON.stringify(tasks)); 
 }
+// ______________________________________________________________
 
 // COMPLETED TASK 
 // COMPLETED TASK 
 // COMPLETED TASK 
-function completeTask(e){
+
+function removeTask(e){
     if (e.target.parentElement.classList.contains
         ('completed-item')) {
-        if(confirm('Are you sure you want to mark this task completed?')) {
-            console.log(e.target.parentElement.classList.contains
-                ('completed-item'));
-         }
-    }
-}
-
+        if(confirm('Do you wish to mark this task completed?')) {
+            e.target.parentElement.parentElement.remove();
+        }
+        document.getElementsByClassName('.completed-collection').appendChild()
+      }
+   }
 
 // function to clear all tasks at once
 function clearTasks(){

@@ -84,6 +84,13 @@ input.btn:focus{
     color: red;
 }
 
+.fa-check-square:hover{
+    background-color: greenyellow;
+
+}
+
+
+
 
 
 /* MEDIA QUERY FOR THE 700PX VIEWPORT */
