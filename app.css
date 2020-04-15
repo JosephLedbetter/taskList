@@ -5,15 +5,13 @@
 body{
     background-image: linear-gradient(#9a0505, red);
     font-family: 'Roboto', sans-serif;
-    display: flex;
-     align-items: center;
-     justify-content: center;
-     min-height: 100vh;
-     min-width: 100vw;
 }
 
 
 .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100vmax;
     width: 100vmax;
 }
@@ -76,9 +74,35 @@ input.btn:focus{
     border: 2px white solid;
 }
 
-@media only screen and (max-width: 670px) {
+@media only screen and (max-width: 700px) {
 .clock-holder{
     font-size: medium;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vmax;
+    width: 100vmax;
+}
+
+.card{
+    width: 60vw;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.card-title{
+    font-weight: bolder;
+    color: red;
+    background: rgb(232, 232, 232);
+    width: 42vmax;
+    height: 5em;
+    margin-left: -25px;
+    margin-top: -25px;
+    padding: 20px 20px 20px;
+    border-radius: 10px 10px 0 0;
 }
 
 }
